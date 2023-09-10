@@ -1,6 +1,7 @@
 const emojis = ["😁", "😁" , "😍" , "😍" , "😯" , "😯" , "😒" , "😒" , "💀" , "💀" , "🥵" , "🥵" , "🥶" , "🥶" , "🐵" , "🐵"];
 const spinEmojis = emojis.sort(() => (Math.random() > .5) ? 2 : -1);
 const span = document.querySelector('span');
+
 let chosenBox = [];
 let arrayBoxs = [];
 let winGame = [];
@@ -20,7 +21,7 @@ boxs.forEach((box) => {
 })
 
 function flipBox(e) {
-    movesCounter()
+    movesCounter();
     const boxClicked = e.target;
     boxClicked.classList.add('boxOpen');
     arrayBoxs.push(boxClicked)
@@ -39,6 +40,7 @@ function matchBox(arrayBox, boxClick) {
          boxClick.removeEventListener('click', flipBox)
          winGame.push(chosenBox[0])
          console.log(winGame);
+
     }else if (chosenBox[0] !== chosenBox[1]) {
         setTimeout(() => {
             arrayBox[0].classList.remove('boxOpen')
