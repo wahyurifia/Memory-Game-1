@@ -80,7 +80,7 @@ h2 {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.85;
+/*     opacity: 0.85; */
     background: #209d7b;
     transition: 0.25s ;
     transform: rotateY(0deg);
